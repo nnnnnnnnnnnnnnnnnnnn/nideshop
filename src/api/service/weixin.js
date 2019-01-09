@@ -25,6 +25,7 @@ module.exports = class extends think.Service {
 
       // 验证用户信息完整性
       const sha1 = crypto.createHash('sha1').update(fullUserInfo.rawData.toString() + sessionData.session_key).digest('hex');
+      think.logger.info('比较下', fullUserInfo.signature !== sha1);
       if (fullUserInfo.signature !== sha1) {
         return null;
       }
