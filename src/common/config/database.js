@@ -8,6 +8,6 @@ module.exports = {
   host: '127.0.0.1',
   port: '3306',
   user: 'root',
-  password: '23256189',
+  password: 'Qq23256189_',
   dateStrings: true
 };
